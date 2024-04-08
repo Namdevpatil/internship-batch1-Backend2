@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="customer" class="com.demo.Customer">  
+		
+		<constructor-arg>
+			<value>204</value>
+		</constructor-arg>
+		
+		<constructor-arg>
+			<value>Kiran Kumar</value>
+		</constructor-arg>
+		
+		<constructor-arg>
+			<value>8989898989</value>
+		</constructor-arg>
+		
+		<constructor-arg ref="address">
+		</constructor-arg>	
+		
+		
+	</bean>
+	
+	<bean id="address" class="com.demo.Address">  
+		
+		<constructor-arg>
+			<value>Koti, Hyderabad</value>
+		</constructor-arg>
+				
+	</bean>
+
+	
+
+</beans>
